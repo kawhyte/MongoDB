@@ -1,0 +1,23 @@
+{
+  "name": "MongoDB",
+  "version": "1.0.0",
+  "description": "Learning MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kawhyte/MongoDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kawhyte/MongoDB/issues"
+  },
+  "homepage": "https://github.com/kawhyte/MongoDB#readme",
+  "dependencies": {
+    "mongoose": "^5.0.1"
+  }
+}
