@@ -1,9 +1,19 @@
 [
-  {"_id":"5a68fdc3615eda645bc6bdec","tags":["express","backend"],"date":"2018-01-24T21:42:27.388Z","name":"Express.js Course","author":"Mosh","isPublished":true,"price":10,"__v":0},
-  {"_id":"5a68fdd7bee8ea64649c2777","tags":["node","backend"],"date":"2018-01-24T21:42:47.912Z","name":"Node.js Course","author":"Mosh","isPublished":true,"price":20,"__v":0},
-  {"_id":"5a68fde3f09ad7646ddec17e","tags":["aspnet","backend"],"date":"2018-01-24T21:42:59.605Z","name":"ASP.NET MVC Course","author":"Mosh","isPublished":true,"price":15,"__v":0},
-  {"_id":"5a68fdf95db93f6477053ddd","tags":["react","frontend"],"date":"2018-01-24T21:43:21.589Z","name":"React Course","author":"Mosh","isPublished":false,"__v":0},
-  {"_id":"5a68fe2142ae6a6482c4c9cb","tags":["node","backend"],"date":"2018-01-24T21:44:01.075Z","name":"Node.js Course by Jack","author":"Jack","isPublished":true,"price":12,"__v":0},
-  {"_id":"5a68ff090c553064a218a547","tags":["node","backend"],"date":"2018-01-24T21:47:53.128Z","name":"Node.js Course by Mary","author":"Mary","isPublished":false,"price":12,"__v":0},
-  {"_id":"5a6900fff467be65019a9001","tags":["angular","frontend"],"date":"2018-01-24T21:56:15.353Z","name":"Angular Course","author":"Mosh","isPublished":true,"price":15,"__v":0}
+{"_id":{"$oid":"5ba634df8864d232a4bc70a8"},"date":{"$date":{"$numberLong":"1516830147388"}},"name":"Express.js Course","author":"Mosh","isPublished":true,"price":{"$numberInt":"10"},"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba635119e667c04606071d0"},"date":{"$date":{"$numberLong":"1516830147388"}},"name":"Express.js Course","author":"Mosh","isPublished":true,"price":{"$numberInt":"10"},"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba63524fb61b41770a24af1"},"date":{"$date":{"$numberLong":"1516830167912"}},"name":"Node.js Course","author":"Mosh","isPublished":true,"price":{"$numberInt":"20"},"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba6355b41f7af2ef0424d93"},"date":{"$date":{"$numberLong":"1516830179605"}},"name":"ASP.NET MVC Course","author":"Mosh","isPublished":true,"price":{"$numberInt":"15"},"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba635691f3436278cd5fd49"},"date":{"$date":{"$numberLong":"1516830201589"}},"name":"React Course","author":"Mosh","isPublished":false,"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba6357c84bed822e8d65118"},"date":{"$date":{"$numberLong":"1516830201589"}},"name":"React Course","author":"Mosh","isPublished":false,"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba6359d01afc52b20b5da4c"},"date":{"$date":{"$numberLong":"1516830241075"}},"name":"Node.js Course by Jack","author":"Jack","isPublished":true,"price":{"$numberInt":"12"},"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba635e1b69b7a32a86b5392"},"date":{"$date":{"$numberLong":"1516830473128"}},"name":"Node.js Course by Mary","author":"Mary","isPublished":false,"price":{"$numberInt":"12"},"__v":{"$numberInt":"0"}},
+
+{"_id":{"$oid":"5ba63649ce14420168d289d9"},"date":{"$date":{"$numberLong":"1516830975353"}},"name":"Angular Course","author":"Mosh","isPublished":true,"price":{"$numberInt":"15"},"__v":{"$numberInt":"0"}}
 ]

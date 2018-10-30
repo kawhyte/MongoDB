@@ -42,7 +42,8 @@ async function getCourses3(){
     const courses = await Course
     //.find({author: 'Rene Whyte' , isPublished: true })
     //.find({author:/^ren/i})
-    .find({isPublished:true, gt:{price:15} })
+    .find({isPublished:true })
+    .or([{name: /.*by.*/i},{price:{$gte:15}}])
     .limit(10)
     .sort({price: -1})
     .select({name:1, author:1, price:1})
@@ -50,4 +51,53 @@ async function getCourses3(){
     console.log(courses);
     }
     
-    getCourses2();
+
+/* async function updateCourse(id){
+    const course = await Course.findById(id);
+    
+    if (!course){
+    console.log("nothing here")
+        return;
+    } 
+    
+    course.isPublished= true;
+    course.author= 'Another Author';
+    const result  = course.save();
+    console.log(result);
+    } */
+
+
+/* async function updateCourse(id){
+    const result= await Course.update({ _id: id}, { 
+        $set:{
+        author:'Kenny',
+        isPublished:false
+    }
+    });
+
+    console.log(result);
+    } */
+async function updateCourse(id){
+    const course= await Course.findByIdAndUpdate( id, { 
+        $set:{
+        author:'Kenny',
+        isPublished:false
+    }
+    },{new:true});
+
+    console.log(course);
+    }
+async function removeCourse(id){
+//const result = await Course.deleteOne({_id: id});
+const course = await Course.findByIdAndRemove(id);
+
+    console.log(course);
+}
+    
+    removeCourse('5ba63649ce14420168d289d9');
+    //updateCourse('5ba635e1b69b7a32a86b5392');
+
+
+//getCourses2();
+
+

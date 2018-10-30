@@ -40,6 +40,7 @@ const courses = await Course
 console.log(courses);
 }
 
-getCourses();
+
+//getCourses();
 //createCourse();
 
