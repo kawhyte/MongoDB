@@ -5,14 +5,48 @@ mongoose.connect('mongodb://localhost/mongo-exercises')
 .catch(err => console.error('Could not connect to mongo-exercises Db',err.message));
 
 const courseSchema = new mongoose.Schema({
-    name: String,
+    name: {
+        type:String, 
+        required: true, 
+        minlength:5, 
+        maxlength:255,},
+
+    category: {
+        type: String,
+        required:true,
+        enum: ['web', 'mobile','network']
+    },
+
     author: String,
     tags:[String],
     date:{type:Date, default: Date.now},
-    isPublished: Boolean
+    isPublished: Boolean,
+    price:{type: Number, required: function(){
+      return this.isPublished;  
+    }, 
+    min:10,
+    max:500}
     });
     
 const Course =  mongoose.model('Course', courseSchema);
+
+async function createCourse(){
+
+    const course = new Course({
+        name: 'se',
+        category:'web',
+        author: 'Rene',
+        tags:['angular', 'Frontend'],
+        isPublished: true,
+        price:15
+    });
+    try {
+        const result = await course.save();
+        console.log(result);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
 
 async function getCourses(){
@@ -93,11 +127,9 @@ const course = await Course.findByIdAndRemove(id);
 
     console.log(course);
 }
-    
-    removeCourse('5ba63649ce14420168d289d9');
-    //updateCourse('5ba635e1b69b7a32a86b5392');
-
-
+createCourse(); 
+//removeCourse('5ba63649ce14420168d289d9');
+//updateCourse('5ba635e1b69b7a32a86b5392');
 //getCourses2();
 
 
